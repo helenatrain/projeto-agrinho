@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Agro Forte, Futuro Sustentável</title>
+
+<style>
+
+:root{
+    --verde-principal:#556B2F;
+    --verde-secundario:#6B8E23;
+    --fundo:#ffffff;
+    --texto:#222222;
+    --card:#f7f7f7;
+}
+
+.dark{
+    --fundo:#1f1f1f;
+    --texto:#ffffff;
+    --card:#2d2d2d;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:var(--fundo);
+    color:var(--texto);
+    font-family:Arial, sans-serif;
+    transition:0.4s;
+    font-size:18px;
+    line-height:1.7;
+}
+
+/* ACESSIBILIDADE */
+
+.acessibilidade{
+    position:fixed;
+    top:15px;
+    right:15px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    z-index:999;
+}
+
+.acessibilidade button{
+    background:var(--verde-principal);
+    color:white;
+    border:none;
+    padding:10px 14px;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.acessibilidade button:hover{
+    background:var(--verde-secundario);
+    transform:scale(1.05);
+}
+
+/* CABEÇALHO */
+
+header{
+    background:linear-gradient(
+    135deg,
+    var(--verde-principal),
+    var(--verde-secundario)
+    );
+    color:white;
+    text-align:center;
+    padding:100px 20px;
+}
+
+header h1{
+    font-size:3rem;
+    margin-bottom:15px;
+}
+
+header p{
+    font-size:1.3rem;
+}
+
+/* CONTEÚDO */
+
+section{
+    max-width:1100px;
+    margin:auto;
+    padding:60px 20px;
+}
+
+.card{
+    background:var(--card);
+    border-radius:20px;
+    padding:25px;
+    margin:25px 0;
+    box-shadow:0 5px 15px rgba(0,0,0,0.12);
+}
+
+.card img{
+    width:100%;
+    border-radius:15px;
+    margin-bottom:15px;
+}
+
+.card h2{
+    color:var(--verde-principal);
+    margin-bottom:10px;
+}
+
+.dark .card h2{
+    color:#9acd32;
+}
+
+.botao{
+    background:var(--verde-principal);
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:10px;
+    cursor:pointer;
+    margin-top:10px;
+    transition:0.3s;
+}
+
+.botao:hover{
+    background:var(--verde-secundario);
+}
+
+/* ANIMAÇÕES */
+
+.animar{
+    opacity:0;
+    transform:translateY(40px);
+    transition:all 1s ease;
+}
+
+.animar.visivel{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* CANVAS */
+
+canvas{
+    width:100%;
+    max-width:700px;
+    margin-top:20px;
+}
+
+/* RODAPÉ */
+
+footer{
+    background:var(--verde-principal);
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:40px;
+}
+
+/* RESPONSIVIDADE */
+
+@media(max-width:768px){
+
+header h1{
+    font-size:2.2rem;
+}
+
+.acessibilidade{
+    position:relative;
+    justify-content:center;
+    margin:15px;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<!-- ACESSIBILIDADE -->
+
+<div class="acessibilidade">
+
+<button onclick="alterarTema()">
+🌙 Tema
+</button>
+
+<button onclick="aumentarFonte()">
+A+
+</button>
+
+<button onclick="diminuirFonte()">
+A-
+</button>
+
+<button onclick="lerPagina()">
+🔊 Ler Página
+</button>
+
+</div>
+
+<!-- CABEÇALHO -->
+
+<header>
+
+<h1>🌱 Agro Forte, Futuro Sustentável</h1>
+
+<p>
+Equilíbrio entre produção agrícola e preservação ambiental
+</p>
+
+</header>
+
+<!-- CONTEÚDO -->
+
+<section>
+
+<div class="card animar">
+
+<img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=1200"
+alt="Plantação sustentável">
+
+<h2>O papel do agronegócio</h2>
+
+<p>
+O agronegócio é responsável pela produção de alimentos,
+fibras e energia que abastecem milhões de pessoas.
+Quando aliado à sustentabilidade, promove o crescimento
+econômico sem comprometer os recursos naturais.
+</p>
+
+</div>
+
+<div class="card animar">
+
+<img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=1200"
+alt="Agricultura sustentável">
+
+<h2>Produzir e preservar</h2>
+
+<p>
+Tecnologias modernas permitem aumentar a produtividade,
+economizar água e proteger o solo. O uso consciente dos
+recursos naturais garante uma agricultura mais eficiente
+e ambientalmente responsável.
+</p>
+
+</div>
+
+<div class="card animar">
+
+<img src="https://images.unsplash.com/photo-1471193945509-9ad0617afabf?w=1200"
+alt="Natureza preservada">
+
+<h2>Meio ambiente e futuro</h2>
+
+<p>
+A preservação das matas, rios e da biodiversidade é
+fundamental para manter o equilíbrio dos ecossistemas e
+assegurar a produção agrícola para as futuras gerações.
+</p>
+
+</div>
+
+<div class="card animar">
+
+<h2>💡 Dica Sustentável</h2>
+
+<p>Clique para descobrir uma ação sustentável:</p>
+
+<button class="botao" onclick="mostrarDica()">
+Mostrar dica
+</button>
+
+<p id="dica" style="margin-top:15px;"></p>
+
+</div>
+
+<div class="card animar">
+
+<h2>📝 Quiz Interativo</h2>
+
+<p>
+Qual prática ajuda a conservar a fertilidade do solo?
+</p>
+
+<button class="botao" onclick="correto()">
+Rotação de culturas
+</button>
+
+<button class="botao" onclick="errado()">
+Desmatamento
+</button>
+
+<p id="resultado" style="margin-top:15px;"></p>
+
+</div>
+
+<div class="card animar">
+
+<h2>📊 Evolução das Práticas Sustentáveis</h2>
+
+<p>
+Exemplo ilustrativo do crescimento da adoção de técnicas
+sustentáveis no campo ao longo dos anos.
+</p>
+
+<canvas id="grafico" width="700" height="350"></canvas>
+
+</div>
+
+<div class="card animar">
+
+<h2>🌍 Objetivos de Desenvolvimento Sustentável (ODS)</h2>
+
+<p>
+A agricultura sustentável contribui diretamente para os
+Objetivos de Desenvolvimento Sustentável propostos pela ONU.
+</p>
+
+<ul style="margin-top:15px;">
+<li><strong>ODS 2:</strong> Fome Zero e Agricultura Sustentável.</li>
+<li><strong>ODS 6:</strong> Água Potável e Saneamento.</li>
+<li><strong>ODS 12:</strong> Consumo e Produção Responsáveis.</li>
+<li><strong>ODS 13:</strong> Ação Contra a Mudança Global do Clima.</li>
+<li><strong>ODS 15:</strong> Vida Terrestre.</li>
+</ul>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+Agro Forte, Futuro Sustentável © 2026
+</p>
+
+</footer>
+
+<script>
+
+/* TEMA */
+
+function alterarTema(){
+document.body.classList.toggle("dark");
+}
+
+/* FONTE */
+
+let tamanhoFonte = 18;
+
+function aumentarFonte(){
+tamanhoFonte += 2;
+document.body.style.fontSize = tamanhoFonte + "px";
+}
+
+function diminuirFonte(){
+if(tamanhoFonte > 12){
+tamanhoFonte -= 2;
+document.body.style.fontSize = tamanhoFonte + "px";
+}
+}
+
+/* LEITURA EM VOZ ALTA */
+
+function lerPagina(){
+
+speechSynthesis.cancel();
+
+const texto = document.body.innerText;
+
+const fala = new SpeechSynthesisUtterance(texto);
+
+fala.lang = "pt-BR";
+
+speechSynthesis.speak(fala);
+
+}
+
+/* DICAS */
+
+const dicas = [
+
+"Utilize sistemas de irrigação eficientes.",
+
+"Preserve matas ciliares próximas aos rios.",
+
+"Invista em energia renovável no campo.",
+
+"Reduza desperdícios de água.",
+
+"Pratique a rotação de culturas.",
+
+"Utilize fertilizantes de forma consciente.",
+
+"Proteja a biodiversidade local."
+
+];
+
+function mostrarDica(){
+
+const sorteio =
+Math.floor(Math.random() * dicas.length);
+
+document.getElementById("dica").innerHTML =
+dicas[sorteio];
+
+}
+
+/* QUIZ */
+
+function correto(){
+
+document.getElementById("resultado").innerHTML =
+"✅ Correto! A rotação de culturas ajuda a manter a fertilidade do solo.";
+
+}
+
+function errado(){
+
+document.getElementById("resultado").innerHTML =
+"❌ Incorreto! O desmatamento prejudica os ecossistemas e o equilíbrio ambiental.";
+
+}
+
+/* ANIMAÇÃO AO ROLAR */
+
+const elementos = document.querySelectorAll(".animar");
+
+const observador = new IntersectionObserver((entradas)=>{
+
+entradas.forEach((entrada)=>{
+
+if(entrada.isIntersecting){
+
+entrada.target.classList.add("visivel");
+
+}
+
+});
+
+});
+
+elementos.forEach((elemento)=>{
+observador.observe(elemento);
+});
+
+/* GRÁFICO ANIMADO */
+
+const canvas = document.getElementById("grafico");
+const ctx = canvas.getContext("2d");
+
+const valores = [20, 35, 50, 65, 80];
+const anos = ["2018", "2020", "2022", "2024", "2026"];
+
+let progresso = 0;
+
+function desenharGrafico(){
+
+ctx.clearRect(0,0,canvas.width,canvas.height);
+
+ctx.beginPath();
+
+ctx.moveTo(60,280);
+
+for(let i=0;i<valores.length;i++){
+
+let x = 60 + (i * 140);
+
+let y = 280 - (valores[i] * progresso);
+
+ctx.lineTo(x,y);
+
+}
+
+ctx.strokeStyle = "#556B2F";
+ctx.lineWidth = 4;
+ctx.stroke();
+
+for(let i=0;i<valores.length;i++){
+
+let x = 60 + (i * 140);
+
+let y = 280 - (valores[i] * progresso);
+
+ctx.beginPath();
+ctx.arc(x,y,6,0,Math.PI*2);
+ctx.fillStyle = "#556B2F";
+ctx.fill();
+
+ctx.fillStyle = "#333";
+ctx.fillText(anos[i],x-12,310);
+
+}
+
+if(progresso < 3){
+
+progresso += 0.02;
+
+requestAnimationFrame(desenharGrafico);
+
+}
+
+}
+
+desenharGrafico();
+
+</script>
+
+</body>
+</html>
